@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>T</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="demo">
+    <a href="#" class="link">
+        <span>Hover me</span>
+    </a>
+</div>
+</body>
+
+<style type="text/css">
+	.link{
+    color: #333;
+    font-family: 'Glory', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: transparent;
+    text-shadow: 2px 2px #eb3b5a,4px 4px #f7b731,6px 6px #0fb9b1;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>
