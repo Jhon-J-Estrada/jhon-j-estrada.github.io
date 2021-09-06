@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-6">
+	            <div class="tab" role="tabpanel">
+	                <!-- Nav tabs -->
+	                <ul class="nav nav-tabs" role="tablist">
+	                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Section 1</a></li>
+	                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Section 2</a></li>
+	                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>
+	                </ul>
+	                <!-- Tab panes -->
+	                <div class="tab-content tabs">
+	                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+	                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+	                        <h3>SecKtion 2</h3>
+	                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane fade" id="Section3">
+	                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<style type="text/css">
+		a:hover,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.tab{
+    font-family: 'Titillium Web', sans-serif;
+    padding: 15px;
+}
+.tab .nav-tabs{
+    padding: 0;
+    margin: 0;
+    border: none;
+}   
+.tab .nav-tabs li a{
+    color: #fff;
+    background: #f2f2f2;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 7px 20px 6px;
+    margin: 0 5px 1px 0;
+    border: none;
+    border-bottom: 3px solid #13637e;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0.1s;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a:hover{
+    color: #13637e;
+    background: #f2f2f2;
+    border: none;
+    border-bottom: 3px solid #13637e;
+}
+.tab .nav-tabs li a:before{
+    content: "";
+    background: #13637e;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: clip-path 0.3s ease 0s,height 0.3s ease 0.2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.tab .nav-tabs li.active a:before,
+.tab .nav-tabs li a:hover:before{
+    height: 0;
+    clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
+}
+.tab .tab-content{
+    color: #555;
+    background: #f2f2f2;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 20px;
+    outline: 10px solid rgba(19,99,126,0.2);
+    position: relative;
+}
+@media only screen and (max-width: 479px){
+    .tab .nav-tabs{
+        padding: 0;
+        margin: 0 0 15px;
+    }
+    .tab .nav-tabs li{
+        width: 100%;
+        text-align: center;
+    }
+    .tab .nav-tabs li a{ margin: 0 0 5px; }
+}
+	</style>
+
+</body>
+</html>

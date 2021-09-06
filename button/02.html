@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="demo">
+    <a href="#" class="link">
+        <span>Hover</span>
+    </a>
+</div>
+<style type="text/css">
+	.link{
+    color: #666;
+    font-family: 'Glory', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0.3s;
+}
+.link:hover,
+.link:focus{
+    color: red;
+}
+.link:before,
+.link:after{
+    content: '';
+    background-color: red;
+    height: 3px;
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    transition: top 0.3s ease 0s,left 0.3s ease 0.3s,opacity 0.3s ease 0.3s;
+}
+.link:after{
+    background: transparent;
+    height: 15px;
+    width: 15px;
+    border: 3px solid red;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: translateY(-50%) rotate(45deg) scale(0);
+    left: 35px;
+    top: 11px;
+    transition: transform 0.3s ease 0.1s,left 0.3s ease 0.3s,opacity 0.3s ease 0.3s;
+}
+.link:hover:before{
+    opacity: 0;
+    top: 10px;
+    left: 50px;
+}
+.link:hover:after{
+    opacity: 0;
+    transform: translateY(-50%) rotate(45deg) scale(1);
+    left: 125px;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+License Terms
+</style>
+
+</body>
+</html>

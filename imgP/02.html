@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+	
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-1.jpg">
+                <div class="box-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Web designer</span>
+                </div>
+                <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-2.jpg">
+                <div class="box-content">
+                    <h3 class="title">Miranda Roy</h3>
+                    <span class="post">Web designer</span>
+                </div>
+                <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-3.jpg">
+                <div class="box-content">
+                    <h3 class="title">Miranda Roy</h3>
+                    <span class="post">Web designer</span>
+                </div>
+                <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+	.box{
+    border: 5px solid #f5f5f5;
+    background: linear-gradient(to top right,#fff 10%,#000 100%);
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,.07);
+    overflow: hidden;
+    position: relative;
+}
+.box:before{
+    content: "";
+    width: 50%;
+    height: 75%;
+    border-top: 208px solid rgba(7,0,2,.3);
+    border-left: 140px solid rgba(240,74,126,.6);
+    border-bottom: 188px solid transparent;
+    border-right: 160px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -230px;
+    z-index: 1;
+    transition: all .4s ease-in-out;
+}
+.box:hover:before{
+    border-top: 325px solid rgba(240,74,126,.8);
+    border-left: 422px solid rgba(240,74,126,.8);
+    border-bottom: 218px solid transparent;
+    border-right: 160px solid transparent;
+    transform: rotate3d(0,0,1,52deg) scale3d(1,1,1);
+    top: 103px;
+    left: -350px;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    transform: scale(1,1);
+    transition: all .3s ease-in-out;
+}
+.box:hover img{
+    opacity: .7;
+    transform: scale(1.1,1.1);
+}
+.box .box-content{
+    color: #fff;
+    background-color: rgba(240,74,126,.8);
+    width: 60%;
+    padding: 10px 10px;
+    transform: scale(0);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: all .5s ease-in-out;
+}
+.box:hover .box-content{ transform: scale(1); }
+.box .title{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.box .post{
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: capitalize;
+    display: block;
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+.box .icon li{
+    margin: 0 3px 0 0;
+    display: inline-block; 
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.box:hover .icon li{ opacity: 1; }
+.box:hover .icon li:nth-child(1){ transition-delay: .2s; }
+.box:hover .icon li:nth-child(2){ transition-delay: .3s; }
+.box .icon li a{
+    color: #f04a7e99;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 28px;
+    height: 30px;
+    width: 30px;
+    border: 2px dotted transparent;
+    border-radius: 50%;
+    display: block;
+    transform: rotate(0);
+    transition: all 0.3s;
+}
+.box .icon li a:hover{
+    color: #f44178;
+    background:#fff;
+    border-color: #f44178;
+    transform: rotate(360deg);
+}
+@media only screen and (max-width:990px){
+    .box{ margin: 0 0 30px; }
+}
+
+</style>
+
+</body>
+</html>
