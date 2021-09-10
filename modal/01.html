@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="modal-box">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+                  view modal
+                </button>
+ 
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content clearfix">
+                            <div class="modal-body">
+                                <div class="modal-icon"><i class="fas fa-gem"></i></div>
+                                <h3 class="title">warning</h3>
+                                <p class="description">The use of Sketch can make you design addicted. Use this application safely.</p>
+                                <button class="btn" data-dismiss="modal">got it</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+	.demo{ background-color: #523E62; }
+.modal-box{ font-family: 'Comfortaa', cursive; }
+.modal-box .show-modal{
+    color: #fff;
+    background-color: #f32e18;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 15px 25px 13px;
+    margin: 80px auto 0;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .show-modal:hover,
+.modal-box .show-modal:focus{
+    color: #fff;
+    background-color: #f32e18;
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.7);
+}
+.modal-backdrop.in{ opacity: 0; }
+.modal-box .modal-dialog{
+    width: 350px;
+    margin: 150px auto 0;
+}
+.modal.fade .modal-dialog{ transform: translateY(-100px); }
+.modal.in .modal-dialog{ transform: translate(0); }
+.modal-box .modal-dialog .modal-content{
+    background: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+}
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 0 !important; }
+.modal-box .modal-dialog .modal-content .modal-body .modal-icon{
+    color: transparent;
+    background: linear-gradient(#e5a606,#f32e18);
+    font-size: 100px;
+    line-height: 100px;
+    margin: -35px 0 20px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #ed2815;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #777;
+    font-size: 15px;
+    margin: 0 35px 30px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn{
+    color: #fff;
+    background: linear-gradient(to bottom,#f84927,#f22b15);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    padding: 16px 10px 14px;
+    border-radius: 0 0 20px 20px;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:hover{ text-shadow: 3px 3px 3px rgba(0,0,0,0.6); }
+.modal-box .modal-dialog .modal-content .modal-body .btn:focus{ outline: none; }
+@media only screen and (max-width: 479px){
+    .modal-dialog{ width: 95% !important; }
+}
+</style>
+</body>
+</html>
