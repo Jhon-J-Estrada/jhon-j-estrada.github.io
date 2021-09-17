@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+</head>
+<body>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-1.jpg">
+                <div class="box-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Web designer</span>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-2.jpg">
+                <div class="box-content">
+                    <h3 class="title">Miranda Roy</h3>
+                    <span class="post">Web designer</span>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-3.jpg">
+                <div class="box-content">
+                    <h3 class="title">Miranda Roy</h3>
+                    <span class="post">Web designer</span>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+	.box{
+    background: linear-gradient(-45deg,#355C7D,#6C5B7B,#C06C84);
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.box:before{
+    content: "";
+    border: 2px solid #fff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate3d(0,0,1,45deg) scale3d(1.5,0,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .35s;
+}
+.box:hover:before{
+    opacity: 1;
+    transform: rotate3d(0,0,1,45deg) scale3d(1.5,1,1);
+}
+.box img{
+    width: 100%;
+    height: auto;
+    transform: translate3d(0,0,0) scale(1);
+    transition: all 0.5s ease 0s;
+}
+.box:hover img{
+    opacity: 0.3;
+    transform: translate3d(-12px,0,0) scale(1.1) rotate(3deg);
+}
+.box .box-content{
+    color: #fff;
+    width: 100%;
+    padding: 15px 10px;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+}
+.box:hover .box-content{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+}
+.box .title{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 0 3px;
+}
+.box .post{
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+    display: block;
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.box .icon li{
+    display: inline-block;
+    margin: 0 2px;
+}
+.box .icon li a{
+    color: #355C7D;
+    background: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: block;
+    transition: all .35s;
+}
+.box .icon li a:hover{
+    color: #6C5B7B;
+    background: #fff;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width:990px){
+    .box{ margin: 0 0 30px; }
+}
+</style>
+</body>
+</html>

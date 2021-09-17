@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="#" class="btn btn-lg">
+                <span>button</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+body{
+	background-color: #000;
+}
+
+	.btn{
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 10px 15px 7px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.btn:focus{ color: #555; }
+.btn:hover{
+    color: #fff;
+    background: transparent;
+    border-color: #ff6600;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.5);
+}
+.btn:before{
+    content: '';
+    background-color: #ff6600;
+    height: 200%;
+    width: 100%;
+    transform: skewY(17deg);
+    position: absolute;
+    left: 0;
+    top: -240%;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.btn:hover:before{ top: -50%; }
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div class="loader">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+<style type="text/css">
+	.loader{
+    width: 80px;
+    height: 80px;
+    margin: 50px auto 0;
+    position: relative;
+    animation: 1.1s linear rotateMain infinite;
+}
+.loader .line{
+    background-color: red;
+    position: absolute;
+}
+.loader .line:nth-child(1){
+    left: 0;
+    top: 40px;
+    animation: 800ms ease-in growWidth infinite;
+}
+.loader .line:nth-child(2){
+    right: 0;
+    top: 40px;
+    animation: 800ms ease-in growWidth infinite;
+}
+.loader .line:nth-child(3){
+    left: 40px;
+    animation: 800ms ease-in growHeight infinite;
+}
+.loader .line:nth-child(4){
+    left: 40px;
+    bottom: 0px;
+    animation: 800ms ease-in growHeight infinite;
+}
+@keyframes rotateMain{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+@keyframes growHeight{
+    0%,100%{
+        height: 0px;
+        width: 5px;
+    }
+    50%{
+        background-color: green;
+        height: 40px;
+        width: 5px;
+    }
+}
+@keyframes growWidth{
+    0%,100%{
+        width: 0px;
+        height: 5px;
+    }
+    50%{
+        background-color: green;
+        width: 40px;
+        height: 5px;
+    }
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+</head>
+<body>
+<div class="loader">
+    <div></div>
+</div>
+
+<style type="text/css">
+	.loader{
+    width: 150px;  
+    height: 150px;
+    margin: 30px auto 0;
+    border-radius: 50%;
+    border: 7px solid #ff5722;
+    position: relative;
+}
+.loader:before,
+.loader:after{
+    content: '';
+    width: 100%;  
+    height: 100%;
+    border-radius: 50%;
+    border: 7px solid #ff5722;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    animation: animate 1s infinite linear;
+}
+.loader:after{ animation-delay: 0.4s; }
+.loader div{
+    background-color: #ff5722;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    transform: scale(0.3);
+}
+@keyframes animate{
+    0%{ transform: translateX(-50%) translateY(-50%) scale(1); }
+    100%{ transform: translateX(-50%) translateY(-50%) scale(0.3); }
+}
+
+</style>
+</body>
+</html>

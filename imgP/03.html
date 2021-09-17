@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+
+</head>
+<body>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-1.jpg">
+                <div class="box-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Web designer</span>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-2.jpg">
+                <div class="box-content">
+                    <h3 class="title">Miranda Roy</h3>
+                    <span class="post">Web designer</span>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="img/img-3.jpg">
+                <div class="box-content">
+                    <h3 class="title">Miranda Roy</h3>
+                    <span class="post">Web designer</span>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+	.box{
+    font-family: 'Raleway', sans-serif;
+    border: 5px solid #fff;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease 0s;
+}
+.box:hover img{ animation: flash 1s; }
+.box .box-content{
+    color: #999;
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    width: 80%;
+    padding: 10px 15px 15px;
+    border: 5px solid #fff;
+    box-shadow: -4px -4px #ee5253 inset;
+    opacity: 0;
+    transform: translateY(-50%) translateX(-50%) scale(2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transition: all 0.3s ease-out 0s;
+}
+.box:hover .box-content{
+    opacity: 1;
+    transform: translateY(-50%) translateX(-50%) scale(1);
+}
+.box .title{
+    color: #ee5253;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 3px;
+}
+.box .post{
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
+    display: block;
+}
+.box .icon{
+    padding: 0 8px;
+    margin: 0;
+    list-style: none;
+}
+.box .icon li{
+    display: inline-block;
+    margin: 0 2px;
+}
+.box .icon li a{
+    color: #fff;
+    background-color: #555;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.box .icon li a:hover{
+    color: #fff;
+    background-color: #ee5253;
+    border-radius: 50%;
+}
+@keyframes flash{
+    0%{ opacity: 0.1; }
+    100%{ opacity: 1; }
+}
+@media only screen and (max-width:990px){
+    .box{ margin: 0 0 30px; }
+}
+</style>
+</body>
+</html>
