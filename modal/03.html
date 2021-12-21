@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://e6t7a8v2.stackpathcdn.com/tutorial/css/fontawesome-all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="modal-box">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+                  Modal
+                </button>
+ 
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <div class="modal-body">
+                                <div class="modal-icon"><i class="fas fa-cubes"></i></div>
+                                <h3 class="title">Perfe</h3>
+                                <p class="description">los recursos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<style type="text/css">
+	.modal-box{ font-family: 'Roboto', sans-serif; }
+.modal-box .show-modal{
+    color: #fff;
+    background: #0c6cb4;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    margin: 80px auto 0;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .show-modal:hover,
+.modal-box .show-modal:focus{
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.modal-backdrop.in{ opacity: 0; }
+.modal-box .modal-dialog{
+    width: 350px;
+    margin: 70px auto 0;
+}
+.modal.fade .modal-dialog{ transform: translate(-100px); }
+.modal.in .modal-dialog{ transform: translate(0); }
+.modal-box .modal-dialog .modal-content{
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    position: relative;
+    }
+.modal-box .modal-dialog .modal-content .close{
+    color: #bc1a1a;
+    background: #fff;
+    font-size: 45px;
+    font-weight: 400;
+    text-shadow: none;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    left: auto;
+    right: -15px;
+    top: -15px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+.modal-box .modal-dialog .modal-content .close:hover{ color: #bc1a1a; }
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 50px 20px !important; }
+.modal-box .modal-dialog .modal-content .modal-body .modal-icon{
+    color: #0c6cb4;
+    font-size: 100px;
+    line-height: 100px;
+    margin: 0 auto 20px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #000;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #5c5c5c;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0;
+}
+@media only screen and (max-width: 767px){
+    .modal-dialog{ width: 90% !important; }
+}
+</style>
+</html>

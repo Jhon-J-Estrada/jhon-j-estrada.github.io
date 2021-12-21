@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<br>
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="#" class="btn btn-lg">
+                <span>Inicio</span>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#" class="btn btn-lg">
+                <span>Charlas</span>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#" class="btn btn-lg">
+                <span>Salir</span>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+<style type="text/css">
+	body{
+	background-color: #ccc;
+}
+.cont{
+	margin: auto;
+  width: 50%;
+  
+  padding: 10px;
+	background-color: #eee;
+}
+
+.btn{
+    color: #313133;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out 0s;
+}
+.btn:focus,
+.btn:hover{
+    color: #313133;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    transform: translateY(-6px);
+}   
+.btn:before{
+    content: '';
+    min-width: calc(100% + 17px);
+    min-height: calc(100% + 17px);
+    border-radius: 50px;
+    border: 5px solid #00FFCB;
+    box-shadow: 0 0 40px rgba(0,255,203,.7);
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .3s ease-in-out 0s;
+}
+.btn:hover:before{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 30px; }
+}
+</style>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+<body>
+<div class="text-effect">
+    <span>J</span><span>h</span><span>o</span><span>n</span>
+    <span>E</span><span>s</span><span>t</span><span>r</span><span>a</span><span>d</span><span>a</span>
+</div>
+</body>
+<style type="text/css">
+	.text-effect{
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    padding: 30px 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+.text-effect span{
+    color: #8612c9;
+    display: inline-block;
+    animation: animate 2s infinite linear;
+}
+.text-effect span:nth-child(even){ color: #d80046; }
+.text-effect span:nth-child(1){ animation-delay:  0s; }
+.text-effect span:nth-child(2){ animation-delay: .1s; }
+.text-effect span:nth-child(3){ animation-delay: .2s; }
+.text-effect span:nth-child(4){ animation-delay: .3s; }
+.text-effect span:nth-child(5){ animation-delay: .4s; }
+.text-effect span:nth-child(6){ animation-delay: .5s; }
+.text-effect span:nth-child(7){ animation-delay: .6s; }
+.text-effect span:nth-child(8){ animation-delay: .7s; }
+.text-effect span:nth-child(9){ animation-delay: .8s; }
+.text-effect span:nth-child(10){ animation-delay: .9s; }
+@keyframes animate{
+    0%{ transform: translateY(-80px) rotateY(0); }
+    40%{ transform: translateY(0px) rotateY(360deg); }
+    50%{ transform: translateY(-15px) rotateY(360deg); }
+    60%{ transform: translateY(0px) rotateY(360deg); }
+    70%{ transform: translateY(-15px) rotateY(360deg); }
+    100%{ transform: translateY(80px) rotateY(0); }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+</style>
+</html>
