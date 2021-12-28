@@ -1,54 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title></title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	
+    
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 <script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<div class="loader">
-    <i class="fa fa-heart"></i>
-</div>
+    <br>
+    <div class="cont">
+<br>
+<audio loop src="audio02.mp3" controls="true" class="audio-1"></audio>
 
-<div class="text-effectText">
-    <span>El tiempo pasa no respeta que uno tenga el deseo de parar, solo continua su recorrido, es interesante que el tiempo no pueda cambiar nuestros pensamiento y desearía decir que tampoco puede cambiar nuestro destino…….</span>
-</div>
 
 <div class="text-effect">
+      <span>
+        <div class="loader">
+    <i class="fa fa-heart"></i>
+</div>
+    </span>
     <span>M</span><span>a</span><span>r</span><span>l</span><span>y</span>
     <span>-</span><span>J</span><span>u</span><span>r</span><span>a</span><span>n</span><span>y</span>
+    <span>
+        <div class="loader">
+    <i class="fa fa-heart"></i>
+</div>
+    </span>
 </div>
 
 
 
 
-<audio controls autoplay> 
-        
-        <source src="audio02.mp3" type="audio/mpeg"> 
-    </audio> 
+<div class="text-effectText">
+    <span>...!!! Hay caminos por los cuales tienes que recorrer si saber que obtienes al final, lo interesante es caminar y aprender del recorrido, cuanto uno desea detener el tiempo y quedarse en esos momentos felices pero no estamos diseñados para estar en pausa tenemos que seguir y saber que las decisiones que tomamos son determinantes para formar nuestro destino.<br><br>
+
+Estoy agradecido por conocerte saber que mis mas secretos y pensamientos te los puedo contar como si te conociera desde mucho tiempo, no te puedo negar que la conexión que tenemos es muy natural fluye  como el agua de una fuente.<br><br>
+
+Te admiro y te deseo como siempre lo mejor, que tus planes se cumplan y que nunca estés triste por mi, para mi es claro que pueden pasar el tempo pero nuestra conexión siempre sera la misma. <br><br>
+
+Quiero que te cuides mucho a nivel de físico, espiritual y mental, que cuando este pensando en mi  puedas mirar este texto y puedas escuchar esta canción.... :)</span>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
 
 </body>
 <style type="text/css">
+body{
+    background-color: #6ab04c70;
+}
+.cont{
+    width: 80%;
+    margin: auto;
+    background-color: #eee;
+
+    -webkit-box-shadow: 6px 4px 15px 3px rgba(255,57,16,0.65); 
+box-shadow: 6px 4px 15px 3px rgba(255,57,16,0.65);
+
+border: 4px double rgba(164,8,8,0.64);
+border-radius: 5px 5px 5px 5px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #6ab04c;
+  width: 30%;
+
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-family: "Roboto";
+}
+.pause {
+    margin-left: 0.5em;
+    cursor:pointer;
+}
+
 
 .loader{
     color: red;
-    font-size: 100px;
+    font-size: 30px;
     line-height: 100px;
-    width: 100px;
-    height: 100px;
-    margin: 50px auto 0;
+    width: 50px;
+    height: 50px;
+    
 }
 .loader i.fa{ animation: heart 1s linear infinite; }
 @keyframes heart{
@@ -59,11 +114,13 @@
     60% {transform: scale(1);} 
 }
 
-	.text-effectText{
+    .text-effectText{
     color: #000;
     font-family: 'Rancho', cursive;
-    font-size: 30px;
-    text-align: center;
+    font-size: 20px;
+    text-align: justify;
+    margin: 7px;
+
     animation: 20s anim-popoutin ease infinite;
 }
 @keyframes anim-popoutin{
@@ -113,7 +170,7 @@
     font-size: 100px;
     font-weight: 700;
     text-align: center;
-    opacity: 0.5;
+    
 }
 .text-effect span{
     display: inline-block;
