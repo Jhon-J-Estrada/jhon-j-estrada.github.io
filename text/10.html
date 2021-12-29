@@ -19,6 +19,7 @@
 </head>
 <body>
     <br>
+    <div class="estrellas"></div>
     <div class="cont">
 <br>
 <audio loop src="audio02.mp3" controls="true" class="audio-1"></audio>
@@ -66,19 +67,57 @@ Quiero que te cuides mucho a nivel de físico, espiritual y mental, que cuando e
 
 </body>
 <style type="text/css">
-body{
-    background-color: #6ab04c70;
+body {
+  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
 }
+
 .cont{
     width: 80%;
     margin: auto;
-    background-color: #eee;
+    background-color: 4px dotted rgba(164,8,8,0.64)
 
    
 
-border: 4px dotted rgba(164,8,8,0.64);
-border-radius: 5px 5px 5px 5px;
-margin-bottom: 20px;
+
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.estrellas {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.estrellas{
+  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
+  z-index:-2;
+
+  -moz-animation:move-twink-back 100s linear infinite;
+  -ms-animation:move-twink-back 100s linear infinite;
+  -o-animation:move-twink-back 100s linear infinite;
+  -webkit-animation:move-twink-back 100s linear infinite;
+  animation:move-twink-back 100s linear infinite;
 }
 
 audio::-webkit-media-controls-panel {
@@ -117,7 +156,7 @@ audio::-webkit-media-controls-panel {
 }
 
     .text-effectText{
-    color: #000;
+    color: #eee;
     font-family: 'Rancho', cursive;
     font-size: 20px;
     text-align: justify;
@@ -127,19 +166,19 @@ audio::-webkit-media-controls-panel {
 }
 @keyframes anim-popoutin{
     0%{
-        color: #000;
+        color: #eee;
         text-shadow: 0 0 0 rgba(0, 0, 0, 0);
         opacity: 0;
         transform: scale(0);
     }
     25%{
-        color: red;
+        color: #6ab04c;
         text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.2);
         opacity: 1;
         transform: scale(1.2);
     }
     50%{
-        color: #000;
+        color: #eee;
         text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
         opacity: 1;
         transform: scale(1);
