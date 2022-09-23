@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Hover me</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #02598e;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}   
+.link:hover,
+.link:focus{
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+.link:after{
+    content: '';
+    background: linear-gradient(transparent,#02598e,transparent);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.link:hover:after{ opacity: 1; }
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

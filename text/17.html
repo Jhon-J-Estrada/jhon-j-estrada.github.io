@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        Jhon  <span>Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #6f00af;
+    font-family: 'Black Ops One', cursive;
+    font-size: 100px;
+    text-align: center;
+    animation: animate 2s infinite linear;
+    animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both infinite, fadeIn 1s both infinite;
+}
+.text-effect span{ color: #DD025B; }
+@keyframes flipper{
+    0%{ transform: rotateX(90deg); }
+    100%{ transform: rotateX(0deg); }
+}
+@keyframes fadeIn{
+    0%{ opacity:0; }
+    100%{ opacity:1; }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 65px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 38px;
+        line-height: 35px;
+    }
+}
+</style>
+</html>

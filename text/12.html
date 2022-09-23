@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #56ab2f;
+    background: linear-gradient( #56ab2f, #a8e063,#56ab2f);
+    font-family: 'Righteous', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent; 
+    animation: animate 1.5s ease-in-out infinite;
+}
+@keyframes animate{
+    0%{ transform: scale3d(1, 1, 1); }
+    10%, 20%{ transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg); }
+    30%, 50%, 70%, 90%{ transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+    40%, 60%, 80%{ transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+    100%{ transform: scale3d(1, 1, 1); }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 65px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+</style>
+</html>

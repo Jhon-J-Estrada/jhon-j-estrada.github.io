@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #636e72;
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: lowercase;
+    margin: 0 15px 0 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #b231ea;
+}
+.link:before{
+    content: '';
+    background-color: #b231ea;
+    height: 100%;
+    width: 15px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    clip-path: polygon(60% 0, 100% 50%, 60% 100%, 0% 100%, 50% 50%, 0% 0%);
+}
+.link:hover:before{
+    opacity: 1;
+    left: 100%;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

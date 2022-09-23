@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Hover me</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #555;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease 0.1s;
+}   
+ 
+.link:hover,
+.link:focus{
+    color: #01a566;
+    text-shadow: 3px 3px rgba(0,0,0,0.2);
+    animation: animate 0.3s linear;
+}
+ 
+@keyframes animate {
+    0%, 100%{ transform: skewX(0); }
+    33%{ transform: skewX(-40deg); }
+    67%{ transform: skewX(40deg); }
+}
+ 
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+
+</style>
+</html>

@@ -186,3 +186,53 @@
 }
 </style>
 </html>
+
+<script type="text/javascript">
+    
+letras = ["w","a","e","f","l","h","c","j","o","o","m","t","e"];
+
+izq = 0;
+der = 0;
+aux = 0;
+salida = "";
+for (var i = 0; i < letras.length; i++) {
+    if(aux > letras.length)
+        break;
+
+    der = aux + 1;
+
+    while (der>=izq){
+        if(der == izq){
+            salida += letras[aux];
+            aux = aux - izq;
+        }
+        der--;
+        
+    }
+
+    izq++;
+}
+
+
+
+
+console.log(salida);
+
+function misteri(a,b) {
+    if(a <= 0 && b <= 0){
+        return 1;
+    }
+
+    if(a%2 == 0){
+        return a + misteri(b,b-1);
+    }else{
+        return b + misteri(a+1,b);
+    }
+
+}
+
+console.log(misteri(6,2))
+
+</script>
+
+
