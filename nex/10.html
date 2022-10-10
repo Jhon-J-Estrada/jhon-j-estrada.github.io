@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	   
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <nav class="pagination-outer" aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<style>
+    .pagination-outer{ text-align: center; }
+.pagination{
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    position: relative;
+}
+.pagination li a.page-link{
+    color: #000;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0 15px;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.pagination li:first-child a.page-link,
+.pagination li:last-child a.page-link{
+    color: rgb(22,125,217);
+}
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus,
+.pagination li.active a.page-link:hover,
+.pagination li.active a.page-link{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    text-shadow: 2px 2px rgb(22,125,217),-1px -1px rgb(22,125,217),-2px -2px rgb(22,125,217),-3px -3px rgba(22,125,217,0.5),-4px -4px rgba(22,125,217,0.5),-5px -5px rgba(22,125,217,0.2),-6px -6px rgba(22,125,217,0.2);
+}
+@media only screen and (max-width: 480px){
+    .pagination{
+        font-size: 0;
+        display: inline-block;
+    }
+    .pagination li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px 0;
+    }
+}
+</style>
+</html>

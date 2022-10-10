@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	   
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+ <script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                            <h3 class="title">Web Designing</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <h3 class="title">Web Development</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <h3 class="title">Web Development</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    :root{ --main-color: #07B67B; }
+.main-timeline{ font-family: 'Poppins', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: 50%;
+    padding: 15px;
+    margin: 0 2px 0 0;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.main-timeline .timeline-content{
+    color: #777;
+    background-color: #fff;
+    text-align: center;
+    padding: 90px 15px 15px;
+    border: 10px solid var(--main-color);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-shadow: 0 0 15px -3px rgba(0,0,0,0.7);
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-content:before{
+    content: '';
+    background: var(--main-color);
+    width: 150px;
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    bottom: -25px;
+    z-index: -2;
+}
+.main-timeline .timeline-icon{
+    color: var(--main-color);
+    background-color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5),0 0 0 10px var(--main-color);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.main-timeline .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 8px;
+}
+.main-timeline .description{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    margin: 0 0 0 2px;
+    float: right;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    right: auto;
+    left: -25px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-icon{
+    left: auto;
+    right: 5px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{
+    border-color: var(--main-color);
+    border-right-color: transparent; 
+    border-top-color: transparent; 
+}
+.main-timeline .timeline:nth-child(4n+2){ --main-color: #ED9909; }
+.main-timeline .timeline:nth-child(4n+3){ --main-color: #8F63A0; }
+.main-timeline .timeline:nth-child(4n+4){ --main-color: #EA3A4D; }
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        margin: 0;
+    }
+}
+</style>
+</html>

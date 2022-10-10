@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Hover me</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #2C3A47;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #82589F;
+}
+.link:before,
+.link:after{
+    content: '';
+    background: #82589F;
+    width: 50%;
+    height: 250%;
+    border-radius: 50%;
+    opacity: 0.15;
+    transform: translateY(-50%) scale(0);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.75, 0.2, 0.165, 1);
+}
+.link:after{
+    left: auto;
+    right: 10px;
+}
+.link:hover:before{ transform: translateY(-50%) scale(1); }
+.link:hover:after{ transform: translateY(-50%) scale(0.8); }
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

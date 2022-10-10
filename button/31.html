@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #555;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all 0.5s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #2980b9;
+    text-decoration: underline;
+    transform: rotateX(360deg) rotate(-5deg);
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

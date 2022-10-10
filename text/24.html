@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="text-effect">
+        <span>F</span><span>r</span><span>e</span><span>s</span><span>a</span>
+        <span> -- </span><span>L</span><span>a</span><span>m</span><span>a</span><span>q</span><span>u</span><span>e</span><span>r</span><span>e</span><span>n</span><span>a</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color:#fff;
+    font-family:'Oxygen', sans-serif;
+    font-size: 70px;
+    text-align: center;
+}
+.text-effect span{
+    line-height: 85px;
+    width: 70px;
+    height: 85px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    animation: spin 8s cubic-bezier(.17,.67,.83,.67)infinite alternate;
+}
+.text-effect span:nth-child(1){ background-color: #dd202d; }
+.text-effect span:nth-child(2){ background-color: #6cbb93; }
+.text-effect span:nth-child(3){ background-color: #f0d095; }
+.text-effect span:nth-child(4){ background-color: #e0e334; }
+.text-effect span:nth-child(5){ background-color: #5756a4; }
+.text-effect span:nth-child(6){ background-color: #6ac5da; }
+.text-effect span:nth-child(7){ background-color: #7abc4a; }
+.text-effect span:nth-child(8){ background-color: #dd202d; }
+.text-effect span:nth-child(9){ background-color: #6cbb93; }
+.text-effect span:nth-child(10){ background-color: #f0d095; }
+.text-effect span:nth-child(11){ background-color: #5756a4; }
+.text-effect span:nth-child(12){ background-color: #6ac5da; }
+.text-effect span:nth-child(13){ background-color: #7abc4a; }
+.text-effect span:nth-child(14){ background-color: #dd202d; }
+.text-effect span:nth-child(15){ background-color: #6cbb93; }
+.text-effect span:nth-child(16){ background-color: #f0d095; }
+.text-effect span:nth-child(17){ background-color: #e0e334; }
+
+@keyframes spin{
+    0% {transform:rotateY(0turn);}
+    100% {transform:rotateY(7turn);}
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 60px; }
+    .text-effect span{
+        line-height: 65px;
+        height: 75px;
+        width: 70px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 50px; }
+    .text-effect span{ width: 45px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 35px; }
+    .text-effect span{ width: 35px; }
+}
+</style>
+</html>

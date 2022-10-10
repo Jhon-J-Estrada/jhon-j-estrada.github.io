@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+<style>
+    :root{
+    --hue: 223;
+    --bg: hsl(var(--hue),10%,90%);
+    --fg: hsl(var(--hue),10%,10%);
+    --primary: hsl(var(--hue),90%,55%);
+    --trans-dur: 0.3s;
+    --pl-dur: 2.6s;
+    font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+}
+.loader{
+    width: 144px;
+    height: 192px;
+    position: relative;
+    margin: 0 auto;
+} 
+.loader:before,
+.loader:after{
+    content: "";
+    width: 144px;
+    height: 192px;
+    position: absolute;
+    left: 0;
+}
+.loader:before {
+    border-radius: 4.5em 0 0 0 / 4em 0 0 0;
+    box-shadow: 0 4em 0 0 inset;
+    top: 0;
+    animation: top calc(var(--pl-dur) / 2) linear infinite, flipZ var(--pl-dur) steps(1) infinite;
+}
+.loader:after {
+    border-radius: 0 0 0 4.5em / 0 0 0 4em;
+    box-shadow: 0 -4em 0 0 var(--primary) inset;
+    bottom: 0;
+    animation: bottom calc(var(--pl-dur) / 2) linear infinite;
+    animation-delay: calc(var(--pl-dur) * -0.25);
+}
+@keyframes top{
+    from{
+        animation-timing-function: ease-in;
+        clip-path: polygon(0 0, 123% 0, 123% 70%, 123% 70%, 123% 0, 123% 0, 123% 100%, 0 100%);
+    }
+    50%{
+        animation-timing-function: ease-out;
+        clip-path: polygon(0 0, 0 0, 0 70%, 77% 70%, 77% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    to{ clip-path: polygon(0 0, 0 0, 0 70%, 0 70%, 0 0, 100% 0, 100% 100%, 0 100%); }
+}
+@keyframes bottom{
+    from{
+        animation-timing-function: ease-in;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 30%, 0 30%, 0 100%, 0 100%);
+    }
+    50%{
+        animation-timing-function: ease-out;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 77% 100%, 77% 30%, 0 30%, 0 100%, 0 100%);
+    }
+    to{ clip-path: polygon(0 0, 100% 0, 100% 100%, 123% 100%, 123% 30%, 100% 30%, 100% 100%, 0 100%); }
+}
+@keyframes flipZ{
+    from{ z-index: 0; }
+    50%, to{ z-index: 1; }
+}
+</style>
+</html>

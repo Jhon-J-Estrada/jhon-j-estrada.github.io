@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="text-effect">
+
+        <span>Jhon Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #fff;
+    background: linear-gradient(to right, #095fab 10%, #1fe45a 50%, #f11c40 60%);
+    background-size: 200% auto;
+    font-family: 'Marck Script', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation: animate 1.8s linear infinite;
+}
+@keyframes animate{
+    to{ background-position: 200% center; }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 55px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 45px; }
+}
+</style>
+</html>

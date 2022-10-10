@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #444;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 25px;
+    padding: 0 2px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.link:hover{ color: #10aab2; }
+.link:before,
+.link:after{
+    content: "";
+    background: linear-gradient(to right bottom, #10aab2 49%, transparent 51%);
+    width: 100%;
+    height: 100%;
+    transform-origin: top center;
+    transform: scaleY(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: transform 0.3s ease 0s,opacity 0.3s ease 0.1s;
+}
+.link:after{
+    background: linear-gradient(to left top, #10aab2 49%, transparent 51%);
+    transform-origin: bottom center;
+    top: auto;
+    bottom: 0;
+}
+.link:hover:before,
+.link:focus:before,
+.link:hover:after,
+.link:focus:after{
+    opacity: 0;
+    transform: scaleY(1);
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+
+
+</style>
+</html>

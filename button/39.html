@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="radio-button">
+                <input type="radio" name="option1" id="op5">
+                <label for="op5">Option One</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="radio-button">
+                <input type="radio" name="option1" id="op6" checked="">
+                <label for="op6">Option Two</label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<style>
+    .radio-button{
+    display: inline-block;
+    position: relative;
+}
+.radio-button input[type=radio]{
+    margin: auto;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.radio-button label{
+    color: #555;
+    background: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0 0 0 27px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.radio-button label:before,
+.radio-button label:after{
+    content: "";
+    background: #555;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0,0,0,0.7);
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.radio-button label:after{
+    background: linear-gradient(#7F00FF, #E100FF);
+    opacity: 0;
+    transform: scale(0);
+}
+.radio-button input[type=radio]:checked+label:before{ opacity: 0; }
+.radio-button input[type=radio]:checked+label:after{
+    opacity: 1;
+    transform: scale(1);
+}
+@media only screen and (max-width:767px){
+    .radio-button{ margin: 0 0 20px; }
+}
+</style>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Javier </span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #04c994;
+    font-family: 'Lemonada', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px #fff8b3;
+    animation: animate 1.5s infinite;
+}
+@keyframes animate{
+    0%,100%{
+        letter-spacing: -0.5em;
+        filter: blur(12px) opacity(0.1);
+    }
+    30%{
+        letter-spacing: 0;
+        filter: blur(0) opacity(1);
+    }
+    70%{
+        letter-spacing: 0;
+        filter: blur(0) opacity(1);
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+</style>
+</html>

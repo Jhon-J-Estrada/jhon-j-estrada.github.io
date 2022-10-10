@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox1" checked="">
+                <label for="checkbox1"></label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<style>
+    .checkbox{ display: inline-block; }
+.checkbox input[type=checkbox]{
+    margin: 0;
+    visibility: hidden;
+    left: 1px;
+    top: 1px;
+}
+.checkbox label{
+    width: 20px;
+    height: 40px;
+    border: 2px solid #706d92;
+    cursor: pointer;
+    border-radius: 100px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.checkbox label:before{
+    content: '';
+    background: #706d92;
+    border-radius: 50px;
+    width: 16px;
+    height: 16px;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transition: all 0.3s ease;
+}
+.checkbox input[type=checkbox]:checked+label{
+    background: #7338ba;
+    border: 2px solid #7338ba;
+}
+.checkbox input[type=checkbox]:checked+label:before{
+    background: #fff;
+    bottom: 18px;
+}
+@media only screen and (max-width:767px){
+    .checkbox{ margin: 0 0 20px; }
+}
+</style>
+</html>

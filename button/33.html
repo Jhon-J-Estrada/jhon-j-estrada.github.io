@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #000;
+    background: linear-gradient(to left,#ccc 50%,#000 50%);
+    background-size: 200% 100%;
+    background-position: 0%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: 'Zilla Slab', serif;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    padding: 0 0 5px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease 0s;
+}   
+.link:hover,
+.link:focus{
+    background-position: -100%;
+    text-shadow: -2px -2px #eb782d;
+}
+.link:before{
+    content: "";
+    background: repeating-linear-gradient(40deg ,#eb782d 0px,#eb782d 6px,transparent 6px,transparent 12px);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: all 0.4s ease-in-out;
+}
+.link:hover:before{ width: 100%; }
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+
+
+</style>
+</html>

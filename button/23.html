@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #4b6584;
+    font-family: 'Fredoka One', cursive;
+    font-size: 22px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: rgba(235,59,90,0.8);
+    text-shadow: -3px -3px rgba(235,59,90,0.2);
+    font-size: 25px;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

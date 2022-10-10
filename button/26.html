@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+
+
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-lg">
+                    <span>Inicio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .btn{
+    color:rgba(255,255,255,0.8);
+    background: #ef5777;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 13px 25px;
+    border-radius: 50px 50px/30px 50px;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+.btn:focus{ color: #fff; }
+.btn:hover{
+    color: #fff; 
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.btn:before,
+.btn:after{
+    content: "";
+    background: #575fcf;
+    width: 0;
+    height: calc(100% - 25px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: -1;
+}
+.btn:after{
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+.btn:hover:before,
+.btn:hover:after{ 
+    width: 100%;
+    left: 0;
+}
+.btn:hover:after{
+    top:auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 30px; }
+}
+</style>
+</html>

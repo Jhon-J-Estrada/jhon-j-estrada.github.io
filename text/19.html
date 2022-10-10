@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #ff0000;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: 2s animate ease-out infinite;
+}
+@keyframes blurry-default{
+    0%, 100% {filter: blur(1px);}
+        50% { filter: blur(3px); }
+}
+@keyframes animate{
+    0% {
+        color:#ff0000;
+        transform: translateX(3px) scaleX(1.01) skewY(-1.01deg);
+    }      
+    25%{ 
+        color:#00ff00;
+        transform: scaleX(1.05) skewY(1.5deg);
+        filter: blur(5px);
+    }   
+    50%{
+        color:#0000ff;
+        transform: scaleX(1.05);
+        filter: blur(4px);
+    }   
+    75%{ filter: blur(1px); }
+    100%{ 
+        animation: blurry-default ease 200ms 1;
+        transform: scaleX(1) translateX(0) skewY(0deg);
+        filter: blur(1px);
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 80px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 35px; }
+}
+</style>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-lg">
+                    <span>Inicio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .btn{
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 6px 32px 6px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus,
+.btn:hover{
+    color: #11C7F8;
+    background-color: transparent;
+}
+.btn:before,
+.btn:after{
+    content: '';
+    background-color: #11C7F8;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transform-origin: bottom center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.btn:after{
+    background-color: transparent;
+    height: 15px;
+    width: 15px;border: 3px solid #11C7F8;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(-50%) rotate(45deg);
+    top: 43%;
+}
+.btn:focus:before,
+.btn:hover:before{
+    opacity: 1;
+    transform: perspective(700px) rotateX(-87deg);
+}
+.btn:focus:after,
+.btn:hover:after{
+    opacity: 1;
+    left: calc(100% - 32px);
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+</style>
+</html>

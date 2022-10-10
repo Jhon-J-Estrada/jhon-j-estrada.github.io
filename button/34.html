@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 20px;
+    text-shadow: 1px 1px #999,2px 2px #e1e1e1,3px 3px #e7e7e7;
+    display: inline-block;
+    transform: translate(-3px,-3px);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #20978e;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transform: translate(0);
+}
+.link:before{
+    content: '';
+    background: linear-gradient(to right,#20978e,#43b2a4,#82c147,#bcd53b);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.link:hover:before{ width: 100%; }
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

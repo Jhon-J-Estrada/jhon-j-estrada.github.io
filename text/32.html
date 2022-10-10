@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #e84385;
+    font-family: 'Lobster Two', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: animate 1.2s infinite ease-in;
+}
+@keyframes animate{
+    0%, 100%{ text-shadow: 3px 0 #fff, 10px 0 #ccc; }
+    25%{ text-shadow: 0 3px #fff, 0 10px #ccc; }
+    50%{ text-shadow: -3px 0 #fff, -10px 0 #ccc; }
+    75%{ text-shadow: 0 -3px #fff, 0 -10px #ccc; }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+</style>
+</html>

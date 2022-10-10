@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link" data-hover="Inicio">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: transparent;
+    font-family: 'KoHo', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 22px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease 0s;
+}
+.link:hover{ color: #24a59d; }
+.link:before{
+    content: attr(data-hover);
+    color: #555;
+    font-size: inherit;
+    transform-style: preserve-3d;
+    transform-origin: right bottom;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s ease 0.2s,transform 0.3s ease 0s,top 0.3s ease 0.1s;
+}
+.link:hover:before,
+.link:focus:before{
+    opacity: 0;
+    transform: rotate(4deg);
+    top: -5px;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

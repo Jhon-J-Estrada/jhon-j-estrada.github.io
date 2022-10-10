@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<style>
+    .loader{
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    transform: rotate(45deg);
+    position: relative;
+}
+.loader div{
+    background-color: #5C6BC0;
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+}
+.loader div:nth-child(1){ animation: animation1shape1 0.5s ease 0s infinite alternate; }
+.loader div:nth-child(2){
+    background-color: #8BC34A;
+    left: auto;
+    right: 0;
+    animation: animation1shape2 0.5s ease 0s infinite alternate;
+}
+.loader div:nth-child(3){
+    background-color: #FFB74D;
+    bottom: 0;
+    animation: animation1shape3 0.5s ease 0s infinite alternate;
+}
+.loader div:nth-child(4){
+    background-color: #F44336;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    animation: animation1shape4 0.5s ease 0s infinite alternate;
+}
+@keyframes animation1shape1{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(30px,30px); }
+}
+@keyframes animation1shape2{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(-30px,30px); }
+}
+@keyframes animation1shape3{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(30px,-30px); }
+}
+@keyframes animation1shape4{
+    0%{ transform: translate(0,0); }
+    100%{ transform: translate(-30px,-30px); }
+}
+</style>
+</html>

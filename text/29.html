@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Javier </span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: rgba(255,255,255,0.8);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    animation: animate 2s infinite;
+}
+@keyframes animate{
+    0%,100%{
+        letter-spacing: 5px;
+        text-shadow: -10px -10px red;
+    }
+    20%{
+        letter-spacing: -2px;
+        text-shadow: 10px 10px green;
+    }
+    60%{
+        letter-spacing: 5px;
+        text-shadow: 10px -10px blue;
+    }
+    80%{
+        letter-spacing: -2px;
+        text-shadow: -10px 10px orange;
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+</style>
+</html>

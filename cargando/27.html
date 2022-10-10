@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<style>
+    .loader{
+    width: 100px;
+    height: 110px;
+    margin: 0 auto;
+    position: relative;
+}
+.loader div{
+    background: #f42f25;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    display: inline-block;
+    transform-origin: 50% 0;
+    animation: bounce 2s ease-in-out infinite;
+}
+.loader div:nth-child(2){
+    background: #f49725;
+    animation-delay: 0.1s;
+}
+.loader div:nth-child(3){ 
+    background: #255ff4; 
+    animation-delay: 0.2s;
+}
+.loader div:nth-child(4){ 
+    background: #9725f4; 
+    animation-delay: 0.3s;
+}
+@keyframes bounce{
+    0%,5%,95%,100%{ transform: translateY(0) scaleY(1); }
+    16.7%{ transform: translateY(0) scaleY(6); }
+    28.3%,38.3%{ transform: translateY(5.25em) scaleY(1); }
+    50%{ transform: translateY(2.625em) scaleY(4.5); }
+    61.7%,71.7%{ transform: translateY(2.625em) scaleY(1); }
+    83.3%{ transform: translateY(0) scaleY(4.5); }
+}
+</style>
+</html>

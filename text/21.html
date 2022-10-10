@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Javier </span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: rgba(255,255,255,0.1);
+    font-family: 'Zilla Slab', serif;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    animation: focus 1s infinite alternate linear;
+}
+@keyframes focus{
+    0%{
+        text-shadow: 0 0 30px #7e40b1;
+        letter-spacing: 30px;
+    }
+    50%{
+        text-shadow: 0 0 0 #6e05c4;
+        font-size: 7em;
+        letter-spacing: 2px;
+        transform: skew(10deg);
+    }
+    75%{
+        text-shadow: 0 0 0 #9b2c8c;
+        font-size: 7em;
+        letter-spacing: 2px;
+    }
+    100%{
+        text-shadow: 0 0 0 #7e40b1;
+        font-size: 7em;
+        letter-spacing: 2px;
+        transform: skew(0);
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 80px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 35px; }
+}
+</style>
+</html>

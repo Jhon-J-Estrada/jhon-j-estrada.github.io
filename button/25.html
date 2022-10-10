@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Hover me</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #636e72;
+    font-family: 'Zilla Slab', serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #2d3436;
+    letter-spacing: 1px;
+    text-shadow: -2px -2px rgba(0,0,0,0.15);
+}
+.link:before{
+    content: '';
+    background: #d63031;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+    animation: animate 1s infinite;
+}
+.link:hover:before{ width: 100%; }
+@keyframes animate{
+    0%{ background-color: #d63031; }
+    20%{ background-color: #00b894; }
+    40%{ background-color: #0984e3; }
+    60%{ background-color: #6c5ce7; }
+    80%{ background-color: #e84393; }
+    100%{ background-color: #f0932b; }
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

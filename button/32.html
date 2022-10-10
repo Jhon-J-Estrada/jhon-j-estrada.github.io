@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #000;
+    font-family: 'Mulish', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #00c2a5;
+    text-shadow: 2px 2px #ddd,4px 4px #ccc;
+    animation: rotate 0.7s ease-in-out both;
+}
+.link span{ display: inline-block; }
+.link:hover span{
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+@keyframes rotate{
+    0%  { transform: rotate(0deg) translate3d(0, 0, 0); }
+    25% { transform: rotate(3deg) translate3d(0, 0, 0); }
+    50% { transform: rotate(-3deg) translate3d(0, 0, 0);}
+    75% { transform: rotate(1deg) translate3d(0, 0, 0); }
+    100% { transform: rotate(0deg) translate3d(0, 0, 0);}
+}
+@keyframes storm{
+    0%{ transform: translate3d(0, 0, 0) translateZ(0); }
+    25% { transform: translate3d(4px, 0, 0) translateZ(0);}
+    50% { transform: translate3d(-3px, 0, 0) translateZ(0); }
+    75% { transform: translate3d(2px, 0, 0) translateZ(0); }
+    100%{ transform: translate3d(0, 0, 0) translateZ(0); }
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #555;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.link:hover,
+.link:focus{
+    color: #1f93b1;
+}
+.link:before{
+    content: '';
+    background: #1f93b1;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(-180deg);
+    transform-origin: top center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.link:hover:before{
+    background: #e9e9e9;
+    transform: rotateX(0deg);
+    top: 50%;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

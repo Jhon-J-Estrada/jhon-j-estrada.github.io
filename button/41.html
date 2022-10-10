@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-lg">
+                    <span>button</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .btn{
+    color: #555;
+    background-color: transparent;
+    font-family: 'KoHo', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px 7px;
+    border: 2px solid #555;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus,
+.btn:hover{
+    color: #2cc550;
+    border-color: #2cc550;
+    box-shadow: 0 0 10px rgba(94,147,80,0.1) inset, 0 0 15px -5px rgba(94,147,80,0.3);
+}
+.btn:before,
+.btn:after{
+    content: "";
+    background-color: #2cc550;
+    height: 100%;
+    width: 110%;
+    transform: translate(-70%, -150%) rotate(-90deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease 0s;
+}
+.btn:after{ transition-delay: 0.2s; }
+.btn:focus:before,
+.btn:hover:before,
+.btn:hover:after,
+.btn:focus:after{
+    opacity: 0;
+    transform: translate(0px, 0px);
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+</style>
+</html>

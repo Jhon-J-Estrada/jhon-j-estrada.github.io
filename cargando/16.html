@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <div id="left" class="ball"></div>
+        <div id="right" class="ball"></div>
+        <div id="up" class="ball"></div>
+        <div id="down" class="ball"></div>
+    </div>
+</body>
+<style>
+    .loader{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+}
+.loader .ball{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+}
+.loader #left{
+    background-color:rgba(12, 200, 252,0.9); 
+    top: 53px;
+    right: 0px;
+    animation: left 2s infinite;
+}
+.loader #right{
+    background-color: rgba(12, 200, 52,0.9);
+    top: 53px;
+    animation: right 2s infinite;
+}
+.loader #up{
+    background-color: rgba(255, 255, 0,0.9);
+    top: 0;
+    left: 53px;
+    animation: up 2s infinite;
+}
+.loader #down{
+    background-color:rgba(232, 36, 6,0.9);
+    bottom: 0;
+    left: 53px;
+    animation: down 2s infinite;
+}
+@keyframes left{
+    0% {transform:translateX(0px);}
+    50%  {transform:translateX(-110px);}
+    100% {transform:translateX(0px);}
+}
+@keyframes right{
+    0% {transform:translateX(0px);}
+    50% {transform:translateX(110px);}
+    100% {transform:translateX(0px);}
+}
+@keyframes up{
+    0%  {transform:translateY(0px);}
+    50%  {transform:translateY(110px);}
+    100% {transform:translateY(0px);}
+}
+@keyframes down{
+    0% {transform:translateY(0px);}
+    50% {transform:translateY(-110px);}
+    100% {transform:translateY(0px);}
+}
+</style>
+</html>
