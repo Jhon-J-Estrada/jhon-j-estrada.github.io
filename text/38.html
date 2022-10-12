@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Codystar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">Jhon Estrada</div>
+</body>
+<style>
+    body{
+        background-color: #111;
+    }
+    .text-effect{
+    color: #fff;
+    font-family: 'Codystar', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow{
+    0%{
+        text-shadow: 0 0 10px #f7cb07, 0 0 20px #f7cb07, 0 0 30px #f7cb07,
+                    0 0 40px #f7cb07, 0 0 50px #f7cb07, 0 0 60px #f7cb07,
+                    0 0 70px #f7cb07, 0 0 90px #f7cb07;
+    }
+    100%{
+        text-shadow: 0 0 20px #f7cb07, 0 0 30px #f7cb07, 0 0 40px #f7cb07,
+                    0 0 50px #f7cb07, 0 0 60px #f7cb07, 0 0 70px #f7cb07,
+                    0 0 80px #f7cb07, 0 1 90px #f7cb07;
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 55px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{ font-size: 40px; }
+}
+</style>
+</html>

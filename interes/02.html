@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+    </div>
+</body>
+<style>
+    .loader{
+    width: 40px;
+    height: 50px;
+    margin: 70px auto 0;
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+    position: relative;
+}
+.loader .box{
+    background: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%/50%;
+    opacity: 0.5;
+    position: absolute;
+    animation: animate 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+}
+.loader .box:nth-of-type(2){ animation-delay: 0.2s; }
+.loader .box:nth-of-type(3){ animation-delay: 0.5s; }
+@keyframes animate{
+    0%{
+        background: #ff7575;
+        transform: translate3d(0px, 0px, 0px);
+    }
+    10%{
+        background: #ff7575;
+        transform: translate3d(0px, 0px, 100px);
+    }
+    20%{
+        background: #ffff75;
+        transform: translate3d(0px, 0px, 200px);
+    }
+    30%{
+        background: #ffff75;
+        transform: translate3d(0px, 0px, 300px);
+    }
+    40%{
+        background: #a0ff75;
+        transform: translate3d(0px, 0px, 300px);
+    }
+    50%{
+        background: #a0ff75;
+        transform: translate3d(0px, 0px, 400px);
+    }
+    60%{
+        background: #a0ff75;
+        transform: translate3d(0px, 0px, 500px);
+    }
+    70%{
+        background: #5075ff;
+        transform: translate3d(0px, 0px, 600px);
+    }
+    80%{
+        background: #5075ff;
+        transform: translate3d(0px, 0px, 700px);
+    }
+    90%{
+        background: #a075ff;
+        transform: translate3d(0px, 0px, 800px);
+    }
+    100%{
+        background: #a075ff;
+        transform: translate3d(0px, 0px, 900px);
+    }
+}
+</style>
+</html>

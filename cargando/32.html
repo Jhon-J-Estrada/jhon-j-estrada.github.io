@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <div>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+<style>
+    .loader{
+    width: 15em;
+    height: 15em;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    animation: hypnosis 5s infinite linear;
+}
+.loader div{
+    font-size: 1.5em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    transform-origin: 5em 5em;
+    position: relative;
+}
+.loader div span,
+.loader div span:before,
+.loader div span:after {
+    border-top: .3em solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: .5;
+    animation: color 10s infinite;
+}
+.loader div span{
+    width: 9em;
+    height: 9em;
+    transform-origin: 5em 2.9em;
+    top: 0em;
+}
+.loader div span:before,
+.loader div span:after{
+    content: "";
+}
+.loader div span:before{
+    width: 8em;
+    height: 8em;
+    border: 0 solid white;
+    border-width: 0 .3em 0 0;
+    right: .1em;
+    top: -.2em;
+}
+.loader div span:after{
+    width: 6.5em;
+    height: 6.5em;
+    border: 0 solid white;
+    border-width: 0 0 .3em 0;
+    right: .4em;
+    bottom: 1.2em;
+}
+.loader div span:nth-child(2){
+    font-size: .6em;
+    transform-origin: 8.3em 4.8em;
+    transform: rotate(-90deg);
+}
+.loader div span:nth-child(3){
+    font-size: .2em;
+    transform-origin: 8em 8.7em;
+    transform: rotate(180deg);
+}
+.loader div:nth-child(2),
+.loader div:nth-child(3),
+.loader div:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.loader div:nth-child(3),
+.loader div:nth-child(4){
+    animation: hypnosis 4s linear infinite reverse;
+}
+.loader div:nth-child(2){ transform: rotate(90deg); }
+.loader div:nth-child(3){ animation-delay: -2s; }
+.loader div:nth-child(4){ animation-delay: -4s; }
+.loader div:nth-child(2) span,
+.loader div:nth-child(2) span:before,
+.loader div:nth-child(2) span:after{
+    border-color: skyblue;
+    animation-delay: 2.5s;
+}
+.loader div:nth-child(3) span,
+.loader div:nth-child(3) span:before,
+.loader div:nth-child(3) span:after{
+    border-color: crimson;
+    animation-delay: 2s;
+}
+.loader div:nth-child(4) span,
+.loader div:nth-child(4) span:before,
+.loader div:nth-child(4) span:after{
+    border-color: gold;
+    animation-delay: .5s;
+}
+@keyframes hypnosis{
+    100%{ transform: rotate(360deg); }
+}
+@keyframes color{
+    10%{ border-color: #845EC2; }
+    20%{ border-color: #FEF950; }
+    30%{ border-color: #FF6F91; }
+    40%{ border-color: #17A554; }
+    50%{ border-color: #33A896; }
+    60%{ border-color: #2247A9; }
+    70%{ border-color: #E8353C; }
+    80%{ border-color: #F3F3CC; }
+    90%{ border-color: #4FFBDF; }
+}
+</style>
+</html>

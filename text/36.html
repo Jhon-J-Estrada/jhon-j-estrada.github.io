@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="text-effect">Jhon Javier </div>
+
+</body>
+<style>
+    .text-effect{
+    color: transparent;
+    background: linear-gradient(#b92b27, #1565C0);
+    font-family: 'Monoton', cursive;
+    font-size: 100px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: animate 2s infinite;
+}
+ 
+@keyframes animate{
+    0%{
+        letter-spacing: 16px;
+        opacity: 0;
+    }
+    20%{
+        letter-spacing: normal;
+        opacity: 1;
+    }
+    80%{
+        letter-spacing: normal;
+        opacity: 1;
+    }
+    100%{
+        letter-spacing: 16px;
+        opacity: 0;
+    }
+}
+ 
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+ 
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+ 
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 55px; }
+}
+ 
+@media only screen and (max-width: 479px){
+    .text-effect{ font-size: 40px; }
+}
+</style>
+</html>

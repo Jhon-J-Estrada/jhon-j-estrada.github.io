@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Hover Me</span>
+        </a>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #111;
+    }
+    .link{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: capitalize;
+    padding: 4px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease 0.2s;
+}
+.link:focus,
+.link:hover{
+    color: #B53471;
+}
+.link:before,
+.link:after{
+    content: '';
+    background-color: #ffb638;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s cubic-bezier(.33, .91, .42, 1);
+}
+.link:after{
+    background-color: #fff;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(.33, .91, .42, 1) 0.2s;
+}
+.link:hover:before{ left: 100%; }
+.link:hover:after{ width: 100%; }
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+
+</style>
+</html>

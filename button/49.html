@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-lg">
+                    <span>Inicio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #357;
+    }
+    .btn{
+    color: #fff;
+    background-color: #935FB2;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus{ color: #fff; }
+.btn:hover{
+    color: #fff;
+    box-shadow: 0 0 20px #000 inset;
+}
+.btn:before,
+.btn:after{
+    content: '';
+    background: #DABAF4;
+    width: 90%;
+    height: 5px;
+    border-radius: 10px;
+    opacity: 0.5;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.btn:after{
+    top: auto;
+    bottom: 0;
+}
+.btn:hover:before,
+.btn:hover:after{
+    width: 115%;
+    opacity: 1;
+}
+.btn span{ display: block; }
+.btn span:before,
+.btn span:after{
+    content: '';
+    background: #DABAF4;
+    height: 70%;
+    width: 5px;
+    border-radius: 10px;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.btn span:after{
+    left: auto;
+    right: 0;
+}
+.btn:hover span:before,
+.btn:hover span:after{
+    height: 135%;
+    opacity: 1;
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+</style>
+</html>
