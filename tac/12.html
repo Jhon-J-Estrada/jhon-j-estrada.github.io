@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	   
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h3 class="title">Web Designing</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h3 class="title">Web Development</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h3 class="title">Web Development</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h3 class="title">Web Development</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h3 class="title">Web Development</h3>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo Integer males uada tellus lorem, et condimentum neque commodo
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .main-timeline{ font-family: 'Poppins', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: 50%;
+    padding: 0 0 0 55px;
+    margin: 0 5px 0 0;
+    float: right;
+}
+.main-timeline .timeline-content{
+    color: #003449;
+    text-align: center;
+    padding: 25px 25px 25px 75px;
+    border: 5px solid #003449;
+    border-radius: 30px;
+    box-shadow: 0 0 0 7px #fff inset, 0 0 15px rgba(0, 0, 0, 0.5) inset;
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-content:before{
+    content: "";
+    background: rgba(1,141,16,0.1);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: -60px;
+}
+.main-timeline .timeline-year{
+    color: #018D10;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 2px;
+    transform: translateY(-50%) rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    left: -15px;
+}
+.main-timeline .title{
+    color: #018D10;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+.main-timeline .description{
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    padding: 0 55px 0 0;
+    float: left;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{ padding: 25px 75px 25px 25px; }
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    left: auto;
+    right: -60px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year{
+    right: -20px;
+    left: auto;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before{ background-color: rgba(2, 95, 162, 0.1); }
+.main-timeline .timeline:nth-child(4n+2) .timeline-year,
+.main-timeline .timeline:nth-child(4n+2) .title{
+    color: #025FA2;
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before{ background-color: rgba(254,20,69,0.1); }
+.main-timeline .timeline:nth-child(4n+3) .timeline-year,
+.main-timeline .timeline:nth-child(4n+3) .title{
+    color: #FE1445;
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before{ background-color: rgba(252, 106, 15, 0.1); }
+.main-timeline .timeline:nth-child(4n+4) .timeline-year,
+.main-timeline .timeline:nth-child(4n+4) .title{
+    color: #fc6a0f;
+}
+@media screen and (max-width:990px){
+    .main-timeline .timeline{ width: calc(50% + 60px); }
+}
+@media screen and (max-width:767px){
+    .main-timeline .timeline{
+        width: 100%;
+        margin: 0 0 50px;
+    }
+}
+@media screen and (max-width:576px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        text-align: center;
+        padding: 55px 0 0 0;
+        margin: 0 0 30px;
+    }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(even) .timeline-content{
+        padding: 75px 25px 25px;
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline:nth-child(even) .timeline-content:before{
+        transform: translateX(-50%) translateY(0);
+        left: 50%;
+        top: -60px;
+        right: auto;
+    }
+    .main-timeline .timeline-year,
+    .main-timeline .timeline:nth-child(even) .timeline-year{
+        transform: translateX(-50%) translateY(0) rotate(0);
+        left: 50%;
+        top: 15px;
+    }
+    .main-timeline .title{ font-size: 23px; }
+}
+</style>
+</html>

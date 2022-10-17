@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="text-effect">
+        <span>Jhon Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    color: #B33771;
+    font-family: 'Jua', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    animation: 2s bounceIn ease-out infinite;
+}
+ 
+@keyframes bounceIn{
+    0%,20%,40%,60%,80%,100%{
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0%{
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    20%{ transform: scale3d(1.1, 1.1, 1.1); }
+    40%{ transform: scale3d(.9, .9, .9); }
+    60%{
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80%{ transform: scale3d(.97, .97, .97); }
+    100%{
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+ 
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+ 
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+ 
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+ 
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+</style>
+</html>

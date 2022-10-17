@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        Jhon <span>Estrada</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    font-family: 'Lobster Two', cursive;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    animation: animate 3s infinite;
+}
+@keyframes animate{
+    0%{
+        background: #d1a1ac;
+        background: linear-gradient( #ef5777, #c9122d 27%, #ef5777 53%, #ef5777 77%,#ef5777 );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    25%{
+        background: #edc2ce;
+        background: linear-gradient( #575fcf, #575fcf 27%, #0f138e 53%, #575fcf 77%, #575fcf );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: #e5d0d6;
+        background: linear-gradient( #4bcffa, #4bcffa 27%, #4bcffa 53%, #0193c4 77%,#4bcffa );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    75%{
+        background: #d1b1b9;
+        background: linear-gradient(#0be881, #0be881 27%, #0be881 53%, #0be881 77%, #048749 );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100%{
+        background: #af7c88;
+        background: linear-gradient(#c9122d, #ef5777 27%, #ef5777 53%, #ef5777 77%, #ef5777 );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 65px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 38px;
+        line-height: 35px;
+    }
+}   
+
+
+</style>
+</html>

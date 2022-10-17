@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-lg">
+                    <span>Inicio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .btn{
+    color: #111;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 35px 8px 20px;
+    border-radius: 24px;
+    border: 1px solid #ffab9d;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+.btn:focus,
+.btn:hover{
+    color: #111;
+    box-shadow: 0 0 10px #ffab9d;
+}   
+.btn:before{
+    content: "";
+    background:#ffab9d;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.btn:focus:before,
+.btn:hover:before{
+    background:#ffab9d;
+    width: 100%;
+}
+.btn:after{
+    content: "\f30b";
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transition: all .3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.btn:focus:after,
+.btn:hover:after{ right: 8px; }
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+</style>
+</html>

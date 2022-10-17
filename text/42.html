@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+
+    <div class="text-effect">
+        <span>Jhon Estrada</span>
+    </div>
+
+    <style>
+        body{
+            background-color: #111;
+        }
+        .text-effect{
+    color: #fff;
+    font-family: 'Viga', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: -2px -2px 1px #232323,-1px -1px 1px #232323,1px 1px 1px #444,
+                2px 2px 0 #333, 3px 3px 0 #333, 4px 4px 0 #333, 5px 5px 0 #333;
+    animation: textShine 1s ease-in-out .2s infinite;
+}
+@keyframes textShine{
+    0%{
+        text-shadow: -2px -2px 1px #232323, -1px -1px 1px #232323, 1px 1px 1px #333,
+                    2px 2px 0 #333, 3px 3px 0 #333, 4px 4px 0 #333, 5px 5px 0 #333;
+    }
+    35%{
+        text-shadow: -2px -2px 1px #EA2027, -1px -1px 1px #EA2027, 1px 1px 1px #EA2027,
+                    2px 2px 0 #EA2027, 3px 3px 0 #EA2027, 4px 4px 0 #EA2027, 5px 5px 0 #EA2027;
+    }
+    65%{
+        text-shadow: -2px -2px 1px #0652DD, -1px -1px 1px #0652DD, 1px 1px 1px #0652DD,
+                    2px 2px 0 #0652DD, 3px 3px 0 #0652DD, 4px 4px 0 #0652DD, 5px 5px 0 #0652DD;
+    }
+    85%{
+        text-shadow: -2px -2px 1px #009432, -1px -1px 1px #009432, 1px 1px 1px #009432,
+                    2px 2px 0 #009432, 3px 3px 0 #009432, 4px 4px 0 #009432, 5px 5px 0 #009432;
+    }
+ 
+    100%{
+        text-shadow: -2px -2px 1px #232323, -1px -1px 1px #232323, 1px 1px 1px #444,
+                    2px 2px 0 #333, 3px 3px 0 #333, 4px 4px 0 #333, 5px 5px 0 #333;
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 50px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+    </style>
+</body>
+</html>

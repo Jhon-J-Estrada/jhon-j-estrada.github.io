@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect">
+        <span>J</span><span>h</span><span>o</span><span>n</span>
+        <span>E</span><span>s</span><span>t</span><span>r</span><span>a</span><span>d</span><span>a</span>
+    </div>
+</body>
+<style>
+    .text-effect{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.text-effect span{
+    color: transparent;
+    background: linear-gradient(#4568DC, #B06AB3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+}
+.text-effect span:nth-child(1){ --i: 1; }
+.text-effect span:nth-child(2){ --i: 2; }
+.text-effect span:nth-child(3){ --i: 3; }
+.text-effect span:nth-child(4){ --i: 4; }
+.text-effect span:nth-child(5){ --i: 5; }
+.text-effect span:nth-child(6){ --i: 6; }
+.text-effect span:nth-child(7){ --i: 7; }
+.text-effect span:nth-child(8){ --i: 8; }
+.text-effect span:nth-child(9){ --i: 9; }
+.text-effect span:nth-child(10){ --i: 10; }
+@keyframes flip{
+    0%,80%{ transform: rotateY(360deg); }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 55px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{ font-size: 40px; }
+}
+</style>
+</html>

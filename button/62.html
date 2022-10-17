@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox1" checked="">
+                    <label for="checkbox1"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .checkbox{ display: inline-block; }
+.checkbox input[type=checkbox]{
+    margin: 0;
+    visibility: hidden;
+    left: 1px;
+    top: 1px;
+}
+.checkbox label{
+    background: linear-gradient(to right, #fd1a15 0, #fc8b34 45%, #7fd03e 55%, #007177 100%) 0 0;
+    background-size: 650px 100%;
+    width: 57px;
+    height: 35px;
+    margin: 0;
+    border-radius: 100px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2) inset;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 500ms ease;
+}
+.checkbox label:before{
+    content: "No";
+    color: #fd1a15;
+    background: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 28px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    transition: all 150ms ease;
+}
+.checkbox input[type=checkbox]:checked+label{ background-position-x: -400px; }
+.checkbox input[type=checkbox]:checked+label:before{
+    content: "Si";
+    color: #007177;
+    left: 25px;
+}
+@media only screen and (max-width:767px){
+    .checkbox{ margin: 0 0 20px; }
+}
+</style>
+</html>

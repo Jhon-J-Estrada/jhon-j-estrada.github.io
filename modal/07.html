@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="modal-box">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+                      view modal
+                    </button>
+     
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content clearfix">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <div class="modal-content clearfix">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    <div class="modal-body">
+                                        <h3 class="title">Level 1</h3>
+                                        <div class="icon"><i class="fas fa-crown"></i></div>
+                                        <ul class="rating">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="far fa-star"></i></li>
+                                        </ul>
+                                        <p class="description">best score ever <span>4304900</span></p>
+                                        <button class="btn">play</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .modal-box{ font-family: 'Noto Sans JP', sans-serif; }
+.modal-box .show-modal{
+    color: #2CBAE7;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    margin: 80px auto 0;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .show-modal:hover,
+.modal-box .show-modal:focus{
+    color: #fff;
+    background-color: #2CBAE7;
+    outline: none;
+}
+.modal-backdrop.in{ opacity: 0; }
+.modal-box .modal-dialog{
+    width: 400px;
+    margin: 50px auto 0;
+}
+.modal.fade .modal-dialog{
+    transform-origin: top center;
+    transform: translateY(-50px) scale(0.5);
+}
+.modal.in .modal-dialog{ transform: translateY(0) scale(1); }
+.modal-box .modal-dialog .modal-content{
+    background: #fff;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.modal-box .modal-dialog .modal-content .close{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: none;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 1;
+    position: absolute;
+    left: auto;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+.modal-box .modal-dialog .modal-content .close:hover{ color: #3a3a3a; }
+.modal-box .modal-dialog .modal-content .close:focus{ outline: none; }
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 0 0 30px; }
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #fff;
+    background-color: #2CBAE7;
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 15px 15px;
+    margin: 0 0 20px;
+    border-top: 10px solid #5FCBED;
+    border-right: 10px solid #5FCBED;
+}
+.modal-box .modal-dialog .modal-content .modal-body .icon{
+    color: #ffd00b;
+    font-size: 100px;
+    line-height: 100px;
+    margin: 0 0 25px;
+    text-shadow: 7px 7px #eee;
+}
+.modal-box .modal-dialog .modal-content .modal-body .rating{
+    padding: 0;
+    margin: 0 0 10px;
+    list-style: none;
+}
+.modal-box .modal-dialog .modal-content .modal-body .rating li{
+    color:#2cbae7;
+    font-size: 35px;
+    line-height: 35px;
+    margin: 0 7px;
+    display: inline-block;
+}
+.modal-box .modal-dialog .modal-content .modal-body .rating li.far{ color: #545659; }
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #33363a;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 25px 15px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description span{
+    color: #4ec5eb;
+    font-size: 30px;
+    font-weight: 400;
+    display: block;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn{
+    color: #fff;
+    background: linear-gradient(to top, #48c3ea 29%, #2cbae7 0%);
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 50%;
+    padding: 5px 10px 8px;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:hover{
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:focus{ outline: none; }
+@media only screen and (max-width: 576px){
+    .modal-dialog{ width: 95% !important; }
+}
+</style>
+</html>

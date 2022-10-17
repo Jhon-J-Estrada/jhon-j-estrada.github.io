@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="demo">
+        <a href="#" class="link">
+            <span>Inicio</span>
+        </a>
+    </div>
+</body>
+<style>
+    .link{
+    color: #333;
+    font-family: 'Bitter', serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+    display: inline-block;
+    overflow: hidden;   
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease 0.1s;
+}   
+.link:hover,
+.link:focus{
+    color: #3f7b3d;
+}
+.link:before{
+    content: "";
+    background: radial-gradient(#6bb32d,#6bb32d,transparent,transparent);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 0.5s cubic-bezier(.47,3,0.1,.3), opacity 0.3s ease 0.3s;
+}
+.link:hover:before{
+    left: 0%;
+    opacity: 0;
+}
+@media only screen and (max-width: 767px){
+    .link{ margin-bottom: 30px; }
+}
+</style>
+</html>

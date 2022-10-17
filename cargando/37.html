@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+<style>
+    .loader{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 10px solid #bdc3c7;
+    border-right-color: #2c3e50;
+    border-left-color: #2c3e50;
+    transform: rotate(-10deg);
+    position: relative;
+    animation: animate 1s infinite ease-in-out;
+}
+.loader:before{
+    content: '';
+    background: linear-gradient(#bdc3c7, #2c3e50);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: ball 2s infinite ease-in-out;
+}
+@keyframes animate{
+    50%{ transform: translateX(45%) translateY(0) rotate(10deg); }
+}
+@keyframes ball{
+    20%{ transform: translateX(100px) translateY(-55px); }
+    50%{ transform: translateX(0) translateY(-100px); }
+    80%{ transform: translateX(100px) translateY(0); }
+}
+</style>
+</html>

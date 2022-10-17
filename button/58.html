@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/f67e2de099.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-lg">
+                    <span>Inicio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .btn{
+    color: #fff;
+    background-color: #8c020e;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 15px 5px;
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus{ color: #fff; }
+.btn:hover{
+    color: #fff;
+    padding-left: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.btn:before{
+    content: '';
+    background: rgba(255,255,255,0.3);
+    height: 100%;
+    width: 120%;
+    transform-origin: right center;
+    transform: translateX(-50%) rotate(0);
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.btn:after{
+    content: "\f105";
+    background-color: rgba(0,0,0,0.8);
+    font-family: "Font Awesome 5 Free";
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 0 0 0 3px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transition: all 0.3s ease 0s;
+}
+.btn:hover:before{
+    top: -90%;
+    transform: translateX(-50%) rotate(-10deg);
+}
+.btn:hover:after{ left: 8px; }
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+</style>
+</html>

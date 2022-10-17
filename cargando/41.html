@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<style>
+    .loader{
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    position: relative;
+    background-image: url("../imgP/img/fresa.png");
+    background-size: contain;
+    
+    
+}
+.loader div{
+    transform-origin: 50% 100%;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    
+}
+.loader div:nth-child(1){ transform: rotate3d(0, 0, 1, 90deg);  }
+.loader div:nth-child(2){ transform: rotate3d(0, 0, 1, 150deg); }
+.loader div:nth-child(3){ transform: rotate3d(0, 0, 1, 210deg); }
+.loader div:nth-child(4){ transform: rotate3d(0, 0, 1, 270deg); }
+.loader div:nth-child(5){ transform: rotate3d(0, 0, 1, 330deg); }
+.loader div:nth-child(6){ transform: rotate3d(0, 0, 1, 390deg); }
+.loader div:after{
+    content: "";
+    display: block;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: transparent;
+    border-width: 100px 58px 0;
+    transform: rotate3d(0.5, 1, 0, 180deg);
+    backface-visibility: hidden;
+}
+.loader div:nth-child(1):after{ 
+    border-top-color: #FFA45E; 
+    animation: split 2s 0.1111111111s ease infinite;
+}
+.loader div:nth-child(2):after{ 
+    border-top-color: #EC4176;
+    animation: split 2s 0.2222222222s ease infinite;
+}
+.loader div:nth-child(3):after{ 
+    border-top-color: #A13670;
+    animation: split 2s 0.3333333333s ease infinite;
+}
+.loader div:nth-child(4):after{ 
+    border-top-color: #262254;
+    animation: split 2s 0.4444444444s ease infinite;
+}
+.loader div:nth-child(5):after{ 
+    border-top-color: #543884;
+    animation: split 2s 0.5555555556s ease infinite;
+}
+.loader div:nth-child(6):after{ 
+    border-top-color: #9A77CF;
+    animation: split 2s 0.6666666667s ease infinite;
+}
+@keyframes split{
+    0% {
+        transform-origin: 50% 100%;
+        transform: rotate3d(0.5, 1, 0, 180deg);
+    }
+    25% {
+        transform-origin: 50% 100%;
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+    50% {
+        opacity: 1;
+        transform-origin: 100% 0%;
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+    75% {
+        opacity: 0;
+        transform: rotate3d(0.5, 1, 0, 180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0.5, 1, 0, 180deg);
+    }
+}
+</style>
+</html>

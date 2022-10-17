@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-effect" data-content="Jhon Estrada">
+        <span>Jhon Estrada</span>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #ccc;
+    }
+    .text-effect{
+    color: #0e80b4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.text-effect:before,
+.text-effect:after{
+    content: attr(data-content);
+    color: transparent;
+    background-image: repeating-linear-gradient( 45deg, transparent 0, transparent 3px, rgba(0,0,0,0.5) 3px, rgba(0,0,0,0.5) 6px );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    animation: animate 2s ease infinite alternate; 
+}
+.text-effect:after{
+    background-image: repeating-linear-gradient( 135deg, transparent 0, transparent 3px, rgba(0,0,0,0.1) 3px, rgba(0,0,0,0.1) 6px );
+    animation: animate_1 2s ease infinite alternate; 
+    z-index: 1;
+}
+@keyframes animate{
+    100%{
+        top: 10px;
+        left: calc(50% + 10px);
+    }
+}
+@keyframes animate_1{
+    100%{
+        top: -10px;
+        left: calc(50% - 10px);
+    }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 70px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 55px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 35px; }
+}
+
+</style>
+</html>

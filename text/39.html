@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="text-effect" data-effect="Jhon Estrada">Jhon Estrada</div>
+</body>
+<style>
+    body{
+        background-color: #000;
+    }
+    .demo{
+    background: linear-gradient(#2193b0, #6dd5ed);
+    text-align: center;
+}
+.text-effect{
+    color: rgba(255,255,255,0.4);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+}
+.text-effect:before{
+    content: attr(data-effect);
+    color: #fff;
+    background: rgba(255,255,255,0.3);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0% 0%, 30% 0%, 30% 100%, 0% 100%);
+    animation: slide 4s 1s linear infinite;
+}
+@keyframes slide{
+    50%{ clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 90px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 75px; }
+}
+@media only screen and (max-width: 576px){
+    .text-effect{ font-size: 55px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{ font-size: 40px; }
+}
+</style>
+</html>
